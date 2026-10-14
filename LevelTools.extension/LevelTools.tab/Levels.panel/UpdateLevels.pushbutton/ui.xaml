@@ -1,0 +1,45 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Update Levels from Link"
+        Height="600" Width="900" MinHeight="420" MinWidth="700"
+        WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
+  <Grid Margin="12">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+
+    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,8">
+      <TextBlock Text="Architectural link:" VerticalAlignment="Center" Margin="0,0,8,0"/>
+      <ComboBox x:Name="cb_link" Width="480" SelectionChanged="link_changed"/>
+    </StackPanel>
+
+    <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,8">
+      <CheckBox x:Name="chk_rename" Content="Rename host levels to match link names"
+                IsChecked="True" Margin="0,0,24,0" Click="refresh"/>
+      <CheckBox x:Name="chk_only_changed" Content="Show only levels that change"
+                IsChecked="False" Click="refresh"/>
+    </StackPanel>
+
+    <DataGrid Grid.Row="2" x:Name="grid"
+              AutoGenerateColumns="True" IsReadOnly="True"
+              SelectionMode="Single" SelectionUnit="FullRow"
+              CanUserAddRows="False" CanUserDeleteRows="False"
+              CanUserReorderColumns="False" HeadersVisibility="Column"
+              GridLinesVisibility="Horizontal" AlternatingRowBackground="#F4F4F4"
+              MouseDoubleClick="change_match"/>
+
+    <TextBlock Grid.Row="3" x:Name="lbl_status" Margin="0,8,0,8" TextWrapping="Wrap"/>
+
+    <DockPanel Grid.Row="4" LastChildFill="False">
+      <Button DockPanel.Dock="Left" Content="Auto-match" Width="100" Margin="0,0,8,0" Click="auto_match"/>
+      <Button DockPanel.Dock="Left" Content="Change match..." Width="120" Margin="0,0,8,0" Click="change_match"/>
+      <Button DockPanel.Dock="Left" Content="Clear match" Width="100" Click="clear_match"/>
+      <Button DockPanel.Dock="Right" Content="Cancel" Width="90" Click="cancel"/>
+      <Button DockPanel.Dock="Right" Content="Apply" Width="90" Margin="0,0,8,0" Click="apply" IsDefault="True"/>
+    </DockPanel>
+  </Grid>
+</Window>
