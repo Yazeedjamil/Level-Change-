@@ -1,4 +1,4 @@
-# Level Tools – Update Levels from Link
+# Quick Tools – Update Levels from Link
 
 A pyRevit tool that updates the elevations (and names) of the levels in an
 MEP model to match the architectural link **without moving a single duct,
@@ -19,11 +19,15 @@ untouched.
 
 ## Install
 
-1. Copy `LevelTools.extension` into your pyRevit extensions folder
+1. Copy `QuickTools.extension` into your pyRevit extensions folder
    (default: `%APPDATA%\pyRevit\Extensions`), or add this repository folder
    as an extension path in pyRevit Settings.
-2. Reload pyRevit. A **LevelTools** tab appears with the button
+2. Reload pyRevit. A **Quick Tools** tab appears with the button
    **Update Levels from Link**.
+
+If you already have an extension with a *Quick Tools* tab, either copy the
+`Levels.panel` folder into that tab, or keep this extension as it is:
+pyRevit merges panels from same-named tabs into one ribbon tab.
 
 Requires pyRevit (IronPython) on Revit 2020 or newer.
 

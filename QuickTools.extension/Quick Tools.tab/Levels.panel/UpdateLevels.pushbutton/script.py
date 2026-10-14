@@ -20,7 +20,7 @@ relationship; the rest are matched by name.  Any match can be overridden in
 the table before applying.
 """
 __title__ = "Update Levels\nfrom Link"
-__author__ = "Level Tools"
+__author__ = "Quick Tools"
 __doc__ = ("Update host levels (elevation and name) from the architectural "
            "link without moving any MEP element.")
 
