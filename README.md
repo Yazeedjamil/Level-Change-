@@ -1,5 +1,12 @@
 # Quick Tools – Update Levels from Link
 
+> **The Quick Tools suite version lives in `Yazeedjamil/yazeed-tools`**
+> (`Revit chat assistant/modules/LevelSync`, product `levelsync`, panel
+> **Levels**, button **Update Levels**, branch `claude/level-sync-quick-tools`).
+> That is the one on the Quick Tools ribbon tab, behind the suite's sign-in,
+> with the suite's theme, dialogs and harnesses. What follows is the earlier
+> pyRevit version of the same tool, kept for machines without the suite.
+
 A pyRevit tool that updates the elevations (and names) of the levels in an
 MEP model to match the architectural link **without moving a single duct,
 pipe, tray, fitting or piece of equipment**.
